@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">de6b6225-8fef-4714-bb47-b10b86ee2dcb</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">4bb9cf73-fbba-4715-96dc-7f1f8ab8729e</dc:identifier>
+        <dc:title>Pensées pour moi-même</dc:title>
+        <dc:creator opf:file-as="Unknown" opf:role="aut">Marc Aurèle</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">Wikisource</dc:contributor>
+        <dc:date>1876-07-15T00:00:00+00:00</dc:date>
+        <dc:publisher>Germer-Baillière</dc:publisher>
+        <dc:language>en</dc:language>
+        <meta content="{}" name="calibre:author_link_map"/>
+    </metadata>
+    <guide/>
+</package>
