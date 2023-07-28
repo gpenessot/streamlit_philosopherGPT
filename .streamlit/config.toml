@@ -1,10 +1,2 @@
 [theme]
 base="dark"
-
-[OPENAI]
-openai_api_key="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"
-
-[QDRANT]
-host="https://4447df39-420b-4e13-8ff0-203f69444bd3.eu-central-1-0.aws.cloud.qdrant.io"
-port="6333"
-qdrant_api_key="OpjYT2OQ5pNldvX_R3DvfIEI1pStYo4ODEOGk3X3GV1OQ-5YnVD5sQ"
