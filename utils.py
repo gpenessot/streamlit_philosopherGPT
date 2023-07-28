@@ -2,9 +2,11 @@ import openai
 import base64
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
-#from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY, COLLECTION_NAME
 import streamlit as st
+# local run
+#from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY, COLLECTION_NAME
 
+COLLECTION_NAME='stoician_philosophy'
 # Set org ID and API key
 openai.api_key = st.secrets['OPENAI']['openai_api_key']
 

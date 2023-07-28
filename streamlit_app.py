@@ -4,8 +4,9 @@ from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
 import streamlit as st
 from streamlit_chat import message
-from utils import *
-#from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
+from utils import set_background, generate_response
+# local run
+# from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
 
 # Setting page title and header
 st.set_page_config(page_title="PhilosopherGPT", page_icon=":robot_face:")
