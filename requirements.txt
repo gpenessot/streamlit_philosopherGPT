@@ -1,0 +1,6 @@
+qdrant_client
+requests
+ipywidgets
+openai
+streamlit_chat
+streamlit

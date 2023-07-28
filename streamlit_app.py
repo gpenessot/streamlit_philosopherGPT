@@ -4,28 +4,22 @@ from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
 import streamlit as st
 from streamlit_chat import message
-from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
-
-openai.api_key = OPENAI_API_KEY
-
-qdrant_client = QdrantClient(
-    url=QDRANT_HOST,
-    port=QDRANT_PORT,
-    api_key=QDRANT_API_KEY,
-)
+from utils import set_background
+#from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
 
 # Setting page title and header
 st.set_page_config(page_title="PhilosopherGPT", page_icon=":robot_face:")
 st.markdown("<h1 font-family:trajan; style='text-align: center;'>PhilosopherGPT</h1>", unsafe_allow_html=True)
 
 # Set org ID and API key
-openai.api_key = OPENAI_API_KEY
+openai.api_key = st.secret['OPENAI']['openai_api_key']
 
 qdrant_client = QdrantClient(
-    url=QDRANT_HOST,
-    port=QDRANT_PORT,
-    api_key=QDRANT_API_KEY,
+    url=st.secret['QDRANT']['host'],
+    port=st.secret['QDRANT']['port'],
+    api_key=st.secret['QDRANT']['qdrant_api_key'],
 )
+
 retrieval_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
 # Initialise session state variables
