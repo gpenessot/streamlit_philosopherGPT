@@ -4,3 +4,4 @@ ipywidgets
 openai
 streamlit_chat
 streamlit
+sentence_transformers
