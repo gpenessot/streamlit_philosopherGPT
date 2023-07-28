@@ -4,7 +4,7 @@ from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
 import streamlit as st
 from streamlit_chat import message
-from utils import set_background
+from utils import *
 #from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
 
 # Setting page title and header
