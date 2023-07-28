@@ -6,12 +6,12 @@ from sentence_transformers import SentenceTransformer
 import streamlit as st
 
 # Set org ID and API key
-openai.api_key = st.secret['OPENAI']['openai_api_key']
+openai.api_key = st.secrets['OPENAI']['openai_api_key']
 
 qdrant_client = QdrantClient(
-    url=st.secret['QDRANT']['host'],
-    port=st.secret['QDRANT']['port'],
-    api_key=st.secret['QDRANT']['qdrant_api_key'],
+    url=st.secrets['QDRANT']['host'],
+    port=st.secrets['QDRANT']['port'],
+    api_key=st.secrets['QDRANT']['qdrant_api_key'],
 )
 
 retrieval_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
