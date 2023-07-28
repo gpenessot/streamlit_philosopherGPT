@@ -2,15 +2,16 @@ import openai
 import base64
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
-from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY, COLLECTION_NAME
+#from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY, COLLECTION_NAME
 import streamlit as st
 
-openai.api_key = OPENAI_API_KEY
+# Set org ID and API key
+openai.api_key = st.secret['OPENAI']['openai_api_key']
 
 qdrant_client = QdrantClient(
-    url=QDRANT_HOST,
-    port=QDRANT_PORT,
-    api_key=QDRANT_API_KEY,
+    url=st.secret['QDRANT']['host'],
+    port=st.secret['QDRANT']['port'],
+    api_key=st.secret['QDRANT']['qdrant_api_key'],
 )
 
 retrieval_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
