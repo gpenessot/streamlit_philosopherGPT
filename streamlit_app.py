@@ -25,7 +25,7 @@ qdrant_client = QdrantClient(
     api_key=st.secrets['QDRANT']['qdrant_api_key'],
 )
 
-@st.cache(ttl=24*3600, hash_funcs={"MyUnhashableClass": lambda _: None})
+@st.cache_resource(ttl=24*3600, hash_funcs={"MyUnhashableClass": lambda _: None})
 def load_model():
 	  return SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
