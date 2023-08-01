@@ -12,6 +12,7 @@ from utils import set_background, generate_response
 # https://blog.streamlit.io/common-app-problems-resource-limits/
 
 # Setting page title and header
+set_background('assets/background.png')
 st.set_page_config(page_title="PhilosopherGPT", page_icon=":robot_face:")
 st.markdown("<h1 font-family:trajan; style='text-align: center;'>PhilosopherGPT</h1>", unsafe_allow_html=True)
 
@@ -51,8 +52,6 @@ if 'total_cost' not in st.session_state:
     st.session_state['total_cost'] = 0.0
 
 model_name = "GPT-3.5"
-
-set_background('assets/background.png')
 
 # Map model names to OpenAI model IDs
 if model_name == "GPT-3.5":
