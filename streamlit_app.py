@@ -1,18 +1,16 @@
+# local run
+# from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
 import os
 import openai
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
-import streamlit as st
 from streamlit_chat import message
 from utils import set_background, generate_response
-# local run
-# from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
 
-# TODO
-# https://blog.streamlit.io/common-app-problems-resource-limits/
+import streamlit as st
+st.set_page_config(page_title="PhilosopherGPT", 
+                   page_icon=":robot_face:")
 
-# Setting page title and header
-st.set_page_config(page_title="PhilosopherGPT", page_icon=":robot_face:")
 set_background('assets/background.png')
 st.markdown("<h1 font-family:trajan; style='text-align: center;'>PhilosopherGPT</h1>", unsafe_allow_html=True)
 
