@@ -8,6 +8,9 @@ from utils import set_background, generate_response
 # local run
 # from config import QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY, OPENAI_API_KEY
 
+# TODO
+# https://blog.streamlit.io/common-app-problems-resource-limits/
+
 # Setting page title and header
 st.set_page_config(page_title="PhilosopherGPT", page_icon=":robot_face:")
 st.markdown("<h1 font-family:trajan; style='text-align: center;'>PhilosopherGPT</h1>", unsafe_allow_html=True)
