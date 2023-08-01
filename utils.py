@@ -16,7 +16,11 @@ qdrant_client = QdrantClient(
     api_key=st.secrets['QDRANT']['qdrant_api_key'],
 )
 
-retrieval_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+@st.cache(ttl=24*3600, hash_funcs={"MyUnhashableClass": lambda _: None})
+def load_model():
+	  return SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+
+retrieval_model = load_model()
 
 def build_prompt(question: str, references: list) -> tuple[str, str]:
     prompt = f"""
