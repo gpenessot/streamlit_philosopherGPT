@@ -53,7 +53,7 @@ def ask(question: str):
 
     prompt, references = build_prompt(question, similar_docs)
 
-    response = openai.ChatCompletion.create(
+    response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "user", "content": prompt},
