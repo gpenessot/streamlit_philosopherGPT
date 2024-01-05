@@ -12,7 +12,7 @@ config.read(ROOT / 'config.cfg')
 # Qdrant
 QDRANT_HOST = config['QDRANT']['host']
 QDRANT_PORT = config['QDRANT']['port']
-QDRANT_API_KEY = config['QDRANT']['api_key']
+QDRANT_API_KEY = config['QDRANT']['qdrant_api_key']
 COLLECTION_NAME='stoician_philosophy'
 # OpenAI
-OPENAI_API_KEY = config['OPENAI']['api_key']
+OPENAI_API_KEY = config['OPENAI']['openai_api_key']
